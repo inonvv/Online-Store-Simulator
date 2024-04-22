@@ -1,11 +1,7 @@
-class StoreInventory:
-    def __init__(self, products=None):
-        if products is None:
-            products = {}
-        self.products = products
+from Classes.Products import Products
 
-    def add_product(self, code, amount):
-        if code in self.products.keys():
-            self.products[code] += amount
-        else:
-            self.products[code] = amount
+
+class StoreInventory(Products):
+    def __init__(self, products=None):
+        super().__init__(products)
+
