@@ -1,20 +1,17 @@
+from Classes.ShoppingCart import ShoppingCart
+
+
 class Costumer:
 
-    def __int__(self, name, age, cart=None):
+    def __init__(self, name, age, cart=None):
         self.name = name
         self.age = age
         if cart is None:
-            # self.cart = new ShoppingCart
+            self.cart = ShoppingCart()
             pass
 
-    def _buy(self):
+    def rate(self):
         pass
 
-    def _remove(self):
-        pass
-
-    def _rate(self):
-        pass
-
-    def _view_cart(self):
+    def view_cart(self):
         print(self.cart)
