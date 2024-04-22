@@ -1,21 +1,13 @@
-class ShoppingCart:
+from Classes.Products import Products
+
+
+class ShoppingCart(Products):
     def __init__(self, products=None):
-        if products is None:
-            products = {}
+        super().__init__(products)
 
-        self.products = products
-
-    def add_product(self, code, amount):
-        # create new product from code
-        # product = getProduct(code);
-        if product is None:
-            raise Exception("no product")
-
-        if code in self.products.keys():
-            self.products[code] += amount
-
-        else:
-            self.products[code] = amount
-
-    def remove_product(self, code, amount):
-        self.products
+    def calculate_products_price(self):
+        price = 0
+        for product_code in self.products.keys():
+            temp_price = self.get_price_by_code(product_code)
+            price += temp_price
+        return price
