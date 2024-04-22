@@ -1,4 +1,5 @@
 # This is a sample Python script.
+from Classes.Costumer import Costumer
 from Classes.Product import Product
 from Classes.ShoppingCart import ShoppingCart
 from Classes.Store import Store
@@ -22,13 +23,15 @@ if __name__ == '__main__':
     # my_store.store_inventory.add_product(apple, 5)
     # my_store.store_inventory.add_product(orange, 6)
 
+    # shopping_cart = ShoppingCart()
+    # shopping_cart.add_product(apple, 5)
+    # shopping_cart.add_product(orange, 10)
+    # total_price = shopping_cart.calculate_products_price()
+    # print(total_price)
 
-    shopping_cart = ShoppingCart()
-    shopping_cart.add_product(apple, 5)
-    shopping_cart.add_product(orange, 10)
-    total_price = shopping_cart.calculate_products_price()
-    print(total_price)
-
-
+    costumer = Costumer("yagor", 33)
+    costumer.cart.add_product(apple, 6)
+    costumer.cart.add_product(orange, 55)
+    costumer.view_cart()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

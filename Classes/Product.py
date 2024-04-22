@@ -4,3 +4,6 @@ class Product:
         self.code = code
         self.price = price
         self.section = section
+
+    def __str__(self):
+        return f"{self.name}, {self.code}, {self.price}"
