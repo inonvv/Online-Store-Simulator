@@ -1,7 +1,6 @@
 class Order:
-    def __init__(self, costumer, products, shipping_address):
+    def __init__(self, costumer, shipping_address):
         self.costumer = costumer
-        self.products = products
         self.shipping_address = shipping_address
 
     def checkout(self, payment_details):
@@ -12,6 +11,8 @@ class Order:
         charge_result = self.charge(payment_details)
         if not charge_result:
             raise Exception("charge has been failed")
+
+        return True
 
     def deliver(self):
         # we have shipping address and we ship it there
