@@ -19,5 +19,5 @@ products_map = {
     'Running Shoes': Product("Running Shoes", "RS500", 80, "Footwear"),
     'Baseball Glove': Product("Baseball Glove", "BG600", 50, "Sports Equipment"),
     'Dress': Product("Dress", "DS700", 120, "Clothing"),
-    'Tennis Racket': Product("Tennis Racket", "TR800", 100, "Sports Equipment")
+    'Tennis Racket': Product("Tennis Racket", "TR800", 100, "Sports Equipment", discount=20)
 }
