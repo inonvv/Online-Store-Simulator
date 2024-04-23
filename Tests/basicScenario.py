@@ -63,3 +63,11 @@ class Tests(unittest.TestCase):
         c3.rate(clothsStore, products_map["T-shirt"], 1)
         c4.rate(clothsStore, products_map["T-shirt"], 5)
         self.assertEqual(clothsStore.store_inventory.products[products_map["T-shirt"].code]["product"].rating, 3)
+
+    def testDiscount(self):
+        tennisShop = Store("tennis")
+        tennisShop.store_inventory.add_product(products_map["Tennis Racket"], 2)
+        c1 = Costumer("c1", 23)
+        c1.cart.add_product(products_map["Tennis Racket"], 1)
+        tennisShop.costumer_payment(c1)
+        self.assertEqual(tennisShop.balance, 80)

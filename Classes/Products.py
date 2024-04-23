@@ -15,7 +15,7 @@ class Products:
             }
 
     def get_price_by_code(self, code):
-        return self.products[code]["amount"] * self.products[code]["product"].price
+        return self.products[code]["amount"] * self.products[code]["product"].get_price()
 
     def remove_product(self, product, amount):
         if product.code not in self.products.keys():
