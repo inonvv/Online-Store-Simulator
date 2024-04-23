@@ -10,8 +10,8 @@ class Costumer:
             self.cart = ShoppingCart()
             pass
 
-    def rate(self):
-        pass
-
     def view_cart(self):
         print(self.cart)
+
+    def rate(self, store, product, rate):
+        store.store_inventory.products[product.code]["product"].add_rating(rate)
