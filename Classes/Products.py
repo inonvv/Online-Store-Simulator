@@ -33,3 +33,5 @@ class Products:
         return string
         # print(product_details["product"])
         # print(product_details["amount"])
+
+
